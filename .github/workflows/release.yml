@@ -36,6 +36,7 @@ jobs:
           repositories: ${{ github.event.repository.name }}
       - uses: cycjimmy/semantic-release-action@v5.0.2
         with:
+          branches: ${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
           dry_run: ${{ github.event_name == 'pull_request' }}
           semantic_version: 25.0.8
           extra_plugins: |

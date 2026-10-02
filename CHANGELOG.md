@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.5...v1.0.6) (2026-10-02)
+
+### Bug Fixes
+
+* keep legacy defaults for page rule status and mobile redirect ([#7](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/issues/7)) ([acc2a1d](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/commit/acc2a1de9d11f513fb7e6d107be8c9bf648a84a4))
+
 ## [1.0.5](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.4...v1.0.5) (2026-10-02)
 
 ### Bug Fixes

@@ -25,7 +25,7 @@ variable "phase" {
   type        = string
 }
 variable "rules" {
-  description = "Ruleset rule objects."
-  type        = list(any)
+  description = "Ruleset rule objects, in the `cloudflare_ruleset` v5 schema. Typed as `any`, as in the legacy module, so rules with different shapes (for example `execute` and `skip`) can share one list."
+  type        = any
   default     = []
 }

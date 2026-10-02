@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.3...v1.0.4) (2026-10-02)
+
+### Bug Fixes
+
+* **record:** move legacy cloudflare_record state to cloudflare_dns_record ([#5](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/issues/5)) ([b9e770b](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/commit/b9e770bab56b36733c23adf68c9a232051eb1f75))
+
 ## [1.0.3](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.2...v1.0.3) (2026-10-02)
 
 ### Bug Fixes

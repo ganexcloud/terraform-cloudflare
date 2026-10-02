@@ -175,8 +175,9 @@ variable "minify" {
   default = { css = "off", html = "off", js = "off" }
 }
 variable "mobile_redirect" {
-  type    = any
-  default = { mobile_subdomain = "", status = "off", strip_uri = false }
+  type = any
+  # The API returns mobile_subdomain as null when unset; "" would plan a perpetual update.
+  default = { mobile_subdomain = null, status = "off", strip_uri = false }
 }
 variable "security_header" {
   type    = any

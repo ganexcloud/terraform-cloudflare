@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.2...v1.0.3) (2026-10-02)
+
+### Bug Fixes
+
+* **zone:** build settings for_each without a conditional ([#4](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/issues/4)) ([b0f4d40](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/commit/b0f4d404044f538aeffc2e16d5f87fb2a7049cb6))
+
 ## [1.0.2](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.1...v1.0.2) (2026-10-02)
 
 ### Bug Fixes

@@ -7,7 +7,8 @@ resource "cloudflare_page_rule" "this" {
 
   actions  = each.value.actions
   priority = try(each.value.priority, null)
-  status   = try(each.value.status, null)
-  target   = each.value.target
-  zone_id  = var.zone_id
+  # Provider v3/v4 defaulted status to "active"; v5 defaults to "disabled".
+  status  = try(each.value.status, "active")
+  target  = each.value.target
+  zone_id = var.zone_id
 }

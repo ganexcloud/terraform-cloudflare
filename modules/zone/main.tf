@@ -16,7 +16,7 @@ resource "cloudflare_zone_subscription" "this" {
 }
 
 resource "cloudflare_zone_setting" "this" {
-  for_each = var.zone_settings_override_enabled ? local.zone_settings : {}
+  for_each = { for setting_id, value in local.zone_settings : setting_id => value if var.zone_settings_override_enabled }
 
   setting_id = each.key
   value      = each.value

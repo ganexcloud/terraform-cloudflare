@@ -4,7 +4,7 @@ Consolidated Terraform module for Cloudflare resources managed by Ganex.
 
 ## Compatibility
 
-Requires Terraform 1.6.0 or later and Cloudflare provider 5.25.0 up to, but not including, 6.0.0.
+Requires Terraform 1.8.0 or later and Cloudflare provider 5.25.0 up to, but not including, 6.0.0. Terraform 1.8 is needed by the `record` submodule, which moves legacy `cloudflare_record` state to `cloudflare_dns_record` with `moved` blocks; consumers do not need to write their own.
 
 Legacy consumers migrate to public submodules, preserving their module label. Every consumer must run `terraform init -upgrade`, `terraform validate`, `terraform plan -out=tfplan` and `terraform show -json tfplan` before any apply.
 
@@ -24,7 +24,7 @@ Legacy consumers migrate to public submodules, preserving their module label. Ev
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.0 |
 | <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | >= 5.25.0, < 6.0.0 |
 
 ## Providers

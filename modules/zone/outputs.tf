@@ -9,6 +9,6 @@ output "this_name_servers" {
 }
 
 output "this_plan" {
-  description = "The Cloudflare rate plan ID assigned to the zone."
-  value       = cloudflare_zone_subscription.this.rate_plan.id
+  description = "The Cloudflare rate plan ID assigned to the zone. Falls back to var.plan when subscription_enabled is false."
+  value       = try(cloudflare_zone_subscription.this[0].rate_plan.id, var.plan)
 }

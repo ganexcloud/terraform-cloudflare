@@ -1,11 +1,12 @@
 variable "zone" {
   description = "Optional basic zone configuration for the consolidated root module."
   type = object({
-    account_id = string
-    name       = string
-    paused     = optional(bool, false)
-    plan       = optional(string, "free")
-    type       = optional(string, "full")
+    account_id           = string
+    name                 = string
+    paused               = optional(bool, false)
+    plan                 = optional(string, "free")
+    subscription_enabled = optional(bool, true)
+    type                 = optional(string, "full")
   })
   default  = null
   nullable = true

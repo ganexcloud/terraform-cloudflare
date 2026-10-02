@@ -15,6 +15,12 @@ variable "plan" {
   default     = "free"
 }
 
+variable "subscription_enabled" {
+  description = "Whether to manage the zone subscription. Set to false for Free zones whose subscription API returns 404 (cloudflare/terraform-provider-cloudflare#7083)."
+  type        = bool
+  default     = true
+}
+
 variable "type" {
   description = "Zone type."
   type        = string

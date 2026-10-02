@@ -2,6 +2,8 @@
 
 Compatibility-focused successor for the legacy zone module. Zone plan and settings require the migration procedure documented for each consumer state.
 
+Some Free zones have no subscription object in the Cloudflare API: `GET /zones/{zone_id}/subscription` returns `404` with code `1207` ("Add a core subscription first"), so `cloudflare_zone_subscription` can be neither imported nor read for them ([cloudflare/terraform-provider-cloudflare#7083](https://github.com/cloudflare/terraform-provider-cloudflare/issues/7083)). For those zones set `subscription_enabled = false`; `this_plan` then returns `var.plan`. Do not let Terraform create the subscription to work around the 404. This input is a workaround and will be removed once the provider handles Free zones.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -73,6 +75,7 @@ No modules.
 | <a name="input_server_side_exclude"></a> [server\_side\_exclude](#input\_server\_side\_exclude) | n/a | `string` | `"on"` | no |
 | <a name="input_sort_query_string_for_cache"></a> [sort\_query\_string\_for\_cache](#input\_sort\_query\_string\_for\_cache) | n/a | `string` | `"off"` | no |
 | <a name="input_ssl"></a> [ssl](#input\_ssl) | n/a | `string` | `"full"` | no |
+| <a name="input_subscription_enabled"></a> [subscription\_enabled](#input\_subscription\_enabled) | Whether to manage the zone subscription. Set to false for Free zones whose subscription API returns 404 (cloudflare/terraform-provider-cloudflare#7083). | `bool` | `true` | no |
 | <a name="input_tls_1_3"></a> [tls\_1\_3](#input\_tls\_1\_3) | n/a | `string` | `"on"` | no |
 | <a name="input_tls_client_auth"></a> [tls\_client\_auth](#input\_tls\_client\_auth) | n/a | `string` | `"off"` | no |
 | <a name="input_true_client_ip_header"></a> [true\_client\_ip\_header](#input\_true\_client\_ip\_header) | n/a | `string` | `"off"` | no |
@@ -91,5 +94,5 @@ No modules.
 |------|-------------|
 | <a name="output_this_id"></a> [this\_id](#output\_this\_id) | The zone ID. |
 | <a name="output_this_name_servers"></a> [this\_name\_servers](#output\_this\_name\_servers) | Cloudflare-assigned name servers. |
-| <a name="output_this_plan"></a> [this\_plan](#output\_this\_plan) | The Cloudflare rate plan ID assigned to the zone. |
+| <a name="output_this_plan"></a> [this\_plan](#output\_this\_plan) | The Cloudflare rate plan ID assigned to the zone. Falls back to var.plan when subscription\_enabled is false. |
 <!-- END_TF_DOCS -->

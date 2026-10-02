@@ -55,7 +55,7 @@ No resources.
 | <a name="input_page_rules"></a> [page\_rules](#input\_page\_rules) | Map of page rule module configurations keyed by logical name. | `map(any)` | `{}` | no |
 | <a name="input_records"></a> [records](#input\_records) | Map of record module configurations keyed by logical name. | `map(any)` | `{}` | no |
 | <a name="input_rulesets"></a> [rulesets](#input\_rulesets) | Map of Ruleset module configurations keyed by logical name. | `map(any)` | `{}` | no |
-| <a name="input_zone"></a> [zone](#input\_zone) | Optional basic zone configuration for the consolidated root module. | <pre>object({<br/>    account_id = string<br/>    name       = string<br/>    paused     = optional(bool, false)<br/>    plan       = optional(string, "free")<br/>    type       = optional(string, "full")<br/>  })</pre> | `null` | no |
+| <a name="input_zone"></a> [zone](#input\_zone) | Optional basic zone configuration for the consolidated root module. | <pre>object({<br/>    account_id           = string<br/>    name                 = string<br/>    paused               = optional(bool, false)<br/>    plan                 = optional(string, "free")<br/>    subscription_enabled = optional(bool, true)<br/>    type                 = optional(string, "full")<br/>  })</pre> | `null` | no |
 
 ## Outputs
 

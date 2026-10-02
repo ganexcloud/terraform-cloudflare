@@ -3,11 +3,12 @@ module "zone" {
 
   source = "./modules/zone"
 
-  account_id = var.zone.account_id
-  paused     = var.zone.paused
-  plan       = var.zone.plan
-  type       = var.zone.type
-  zone       = var.zone.name
+  account_id           = var.zone.account_id
+  paused               = var.zone.paused
+  plan                 = var.zone.plan
+  subscription_enabled = var.zone.subscription_enabled
+  type                 = var.zone.type
+  zone                 = var.zone.name
 }
 
 module "record" {

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.4...v1.0.5) (2026-10-02)
+
+### Bug Fixes
+
+* **zone:** allow Free zones without a subscription object ([#6](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/issues/6)) ([999f004](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/commit/999f004343eb4ba9f1c6e2b4f273d14c1e22d016)), closes [cloudflare/terraform-provider-cloudflare#7083](https://github.com/cloudflare/terraform-provider-cloudflare/issues/7083)
+
 ## [1.0.4](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.3...v1.0.4) (2026-10-02)
 
 ### Bug Fixes

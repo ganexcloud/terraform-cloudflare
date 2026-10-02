@@ -1,6 +1,6 @@
 # terraform-cloudflare
 
-Módulo Terraform consolidado para recursos Cloudflare gerenciados pela Ganex.
+Consolidated Terraform module for Cloudflare resources managed by Ganex.
 
 ## Compatibility
 

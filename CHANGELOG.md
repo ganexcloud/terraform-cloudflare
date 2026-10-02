@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/compare/v1.0.0...v1.0.1) (2026-10-02)
+
+### Bug Fixes
+
+* **record:** preserve comment and tags ([#2](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/issues/2)) ([98e6784](https://github.com/ganexcloud/terraform-cloudflare-cloudflare/commit/98e6784d2d445ce3be7d7ac8a81c558121f6ff8c))
+
 ## 1.0.0 (2026-10-01)
 
 ### Features

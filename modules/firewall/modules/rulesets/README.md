@@ -35,7 +35,7 @@ No modules.
 | <a name="input_kind"></a> [kind](#input\_kind) | Ruleset kind. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Ruleset name. | `string` | n/a | yes |
 | <a name="input_phase"></a> [phase](#input\_phase) | Ruleset phase. | `string` | n/a | yes |
-| <a name="input_rules"></a> [rules](#input\_rules) | Ruleset rule objects. | `list(any)` | `[]` | no |
+| <a name="input_rules"></a> [rules](#input\_rules) | Ruleset rule objects, in the `cloudflare_ruleset` v5 schema. Typed as `any`, as in the legacy module, so rules with different shapes (for example `execute` and `skip`) can share one list. | `any` | `[]` | no |
 | <a name="input_zone_id"></a> [zone\_id](#input\_zone\_id) | Zone ID. | `string` | n/a | yes |
 
 ## Outputs

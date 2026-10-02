@@ -32,9 +32,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_records"></a> [records](#input\_records) | DNS records excluding CAA and SRV records. | `list(any)` | `[]` | no |
-| <a name="input_records_caa"></a> [records\_caa](#input\_records\_caa) | CAA records. | `list(any)` | `[]` | no |
-| <a name="input_records_srv"></a> [records\_srv](#input\_records\_srv) | SRV records. | `list(any)` | `[]` | no |
+| <a name="input_records"></a> [records](#input\_records) | DNS records excluding CAA and SRV records. Optional keys include `comment` (string) and `tags` (list of strings, or a comma-separated string when records have mixed keys). | `list(any)` | `[]` | no |
+| <a name="input_records_caa"></a> [records\_caa](#input\_records\_caa) | CAA records. Optional keys include `comment` (string) and `tags` (list of strings, or a comma-separated string when records have mixed keys). | `list(any)` | `[]` | no |
+| <a name="input_records_srv"></a> [records\_srv](#input\_records\_srv) | SRV records. Optional keys include `comment` (string) and `tags` (list of strings, or a comma-separated string when records have mixed keys). | `list(any)` | `[]` | no |
 | <a name="input_zone_id"></a> [zone\_id](#input\_zone\_id) | DNS zone ID. | `string` | n/a | yes |
 | <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | Optional zone name used to compose SRV owner names. | `string` | `null` | no |
 
